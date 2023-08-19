@@ -18,9 +18,6 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-track {
     border-radius: 10px;  
 }
-body{
-    overflow-x: hidden;
-}
 .toggle_menu {
     top: 16px;
     right: 16px;
