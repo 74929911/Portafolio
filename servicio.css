@@ -1,0 +1,208 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+body::-webkit-scrollbar:vertical {
+    width:12px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(192, 192, 192);
+    border-radius: 20px;
+}
+body::-webkit-scrollbar-track {
+    border-radius: 10px;  
+}
+.toggle_menu {
+    top: 16px;
+    right: 16px;
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+    color: black;
+}
+
+.main_flex {
+    width: 100%;
+    height: auto;
+    background-color: rgb(224, 224, 224);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    transform: translateY(-100%);
+    transition: transform .3s ease;
+}
+
+.main_flex li a {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: black;
+
+}
+.main_flex li{
+    padding: 15px 35px;
+}
+.menu_show {
+    transform: translateY(0);
+}
+
+
+.info_servicio_herramientas{
+    display: flex;
+    justify-content: space-around;
+}
+.info_text{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 40%;
+    padding-left: 10px;
+    animation-name: card;
+    animation-duration: 1s;
+    animation-direction: normal;
+    animation-timing-function: ease-in-out;
+}
+@keyframes card {
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+.info_text h1{
+    font-family: 'Lilita One', cursive;
+}
+.info_text p{
+    font-family: 'Roboto', sans-serif;
+}
+
+.info_servicio_herramientas img{
+    width: 400px;
+}
+.title{
+    text-align: center;
+    font-family: 'Lilita One', cursive;
+    letter-spacing: 20px;
+    font-size: 70px;
+    margin: 30px;
+}
+
+.servicios{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-items: center;
+    gap: 10px;
+}
+.article{
+    width: 300px;
+    height: 500px;
+    padding: 10px;
+    outline: 1px solid black;
+    text-align: center;
+    animation-name: card_article;
+    animation-duration: 1s;
+    animation-direction: normal;
+    animation-timing-function: ease-in-out;
+}
+@keyframes card_article {
+    from{
+        opacity: 0;
+        transform: translateY(-50px);
+    }to{
+        opacity: 1;
+        transform:translateY(0) ;
+    }
+}
+.article img{
+    height: 40%;
+    background-color: red;
+    width: 100%;
+}
+.article h2{
+    text-transform: capitalize;
+    font-family: 'Roboto', sans-serif;
+}
+.article p{
+    font-family: 'Roboto', sans-serif;
+}
+.herramientas{
+    width: 100%;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 1fr;
+}
+.text_herramientas{
+    font-size: 50px;
+    font-family: 'Lilita One', cursive;
+}
+.center_text_herramientas{
+    display: flex;
+    align-items: center;
+    font-family: 'Lilita One', cursive;
+    letter-spacing: 15px;
+    justify-content: center;
+}
+.article_herramientas{
+    margin-left: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+.article_herramientas h3{
+    font-weight: bold;
+}
+.content_text_herramientas{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+@media screen and (max-width:1000px) {
+    .servicios{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+    }
+    .info_servicio_herramientas{
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+    .info_text{
+        width: 100%;
+        text-align: center;
+    }
+    .herramientas{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2,1fr);
+    }
+}
+@media screen and (min-width:768px) {
+    .main_flex {
+        flex-direction: row;
+        transform: translateY(0);
+    }
+    .article{
+        margin-bottom: 30px;
+    }
+
+    .toggle_menu {
+        display: none;
+    }
+}
+@media screen and (max-width:700px){
+    .servicios{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3,1fr);
+    }
+    .article{
+        margin-bottom: 30px;
+    }
+}
