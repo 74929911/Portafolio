@@ -8,7 +8,7 @@
     --color-apagado:black;
 }
 body {
-    overflow-x: hidden;
+    overflow: hidden;
     background-color: var(--backgroud-global);
 }
 * {
