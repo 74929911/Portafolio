@@ -3,9 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    overflow: hidden;
-}
 body::-webkit-scrollbar {
     -webkit-appearance: none;
 }
@@ -20,6 +17,9 @@ body::-webkit-scrollbar-thumb {
 }
 body::-webkit-scrollbar-track {
     border-radius: 10px;  
+}
+body{
+    overflow-x: hidden;
 }
 .toggle_menu {
     top: 16px;

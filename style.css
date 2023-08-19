@@ -8,7 +8,7 @@
     --color-apagado:black;
 }
 body {
-    overflow: hidden;
+    overflow-x: hidden;
     background-color: var(--backgroud-global);
 }
 * {
@@ -35,7 +35,6 @@ body {
 }
 
 .main_flex {
-    width: 100%;
     height: auto;
     background-color: rgb(224, 224, 224);
     display: flex;
